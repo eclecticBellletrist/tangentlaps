@@ -1,3 +1,6 @@
 aiogram==2.11.2
 environs==9.2.0
-loguru==0.5.3
+loguru==0.6.0
+pymongo~=4.7.2
+numpy~=1.26.4
+motor~=3.4.0

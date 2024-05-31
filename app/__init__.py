@@ -1,5 +1,5 @@
 __author__ = """
-    Forzend Mainer
-    https://github.com/0Kit/
+    eclecticBelletrist
+    https://github.com/eclecticBelletrist
 """
-__version__ = '1.0'
+__version__ = '0.3'
