@@ -11,7 +11,6 @@ db = client['tangent_db']
 fs = gridfs.GridFS(db)
 
 # Коллекция Users
-# Структура документа в коллекции Users
 user_document = {
     "user_id": str(uuid4()),          # Уникальный идентификатор пользователя
     "username": "example_user",       # Имя пользователя
@@ -28,7 +27,6 @@ user_document = {
 }
 
 # Коллекция Laps
-# Структура документа в коллекции Laps
 laps_document = {
     "video_id": str(uuid4()),        # Уникальный идентификатор видео
     "file_id": "file_123",           # Идентификатор файла
@@ -42,7 +40,6 @@ laps_document = {
 }
 
 # Коллекция Moderators
-# Структура документа в коллекции Moderators
 moderator_document = {
     "moderator_id": str(uuid4()),  # Уникальный идентификатор модератора
     "username": "moderator_user",  # Имя пользователя модератора
@@ -50,7 +47,6 @@ moderator_document = {
 }
 
 # Коллекция Tags
-# Структура документа в коллекции Tags
 tags_document = {
     "tag_id": str(uuid4()),  # Уникальный идентификатор тега
     "tag_name": "example_tag",  # Имя тега
@@ -58,7 +54,6 @@ tags_document = {
 }
 
 # Коллекция UserActions
-# Структура документа в коллекции UserActions
 user_action_document = {
     "action_id": str(uuid4()),  # Уникальный идентификатор действия
     "user_id": "user_id1",      # Уникальный идентификатор пользователя
@@ -69,7 +64,8 @@ user_action_document = {
     "reason": "Inappropriate content"  # Причина действия (если применимо)
 }
 
-# Создание индексов для всех коллекций
+# Создание индексов для коллекций
+
 # Индексы для коллекции Users
 db.Users.create_index("username", unique=True)  # Индекс для быстрого поиска по имени пользователя
 db.Users.create_index("lang_code")  # Индекс для фильтрации по языковым предпочтениям
