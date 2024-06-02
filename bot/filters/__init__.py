@@ -1,6 +1,6 @@
 from loguru import logger
 
-from app.loader import dp
+from bot.loader import dp
 
-if __name__ == "app.filters":
+if __name__ == "bot.filters":
     logger.info('Filters are successfully configured')

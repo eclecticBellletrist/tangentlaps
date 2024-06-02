@@ -4,7 +4,7 @@ from aiogram.utils.exceptions import ChatNotFound
 
 from loguru import logger
 
-from app.loader import dp
+from bot.loader import dp
 
 
 async def notify_admins(admins: Union[List[int], List[str], int, str]):

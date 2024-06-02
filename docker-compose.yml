@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 services:
   mongodb:
@@ -9,15 +9,16 @@ services:
     volumes:
       - mongo-data:/data/db
 
-  app:
+  bot:
     build: .
-    container_name: my_app
+    container_name: bot
     ports:
       - "8000:8000"
     depends_on:
       - mongodb
-    environment:
-      - MONGO_URI=mongodb://mongodb:27017/mydatabase
+    env_file:
+      - .env.dist
+    command: ["python", "main.py", "db/init_db.py"]
 
 volumes:
   mongo-data:
